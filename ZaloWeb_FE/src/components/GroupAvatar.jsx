@@ -32,11 +32,11 @@ const GroupAvatar = ({ chat }) => {
       "bottom-0 right-0", // dưới phải
     ];
     return (
-      <div className="h-14 w-14 relative shrink-0 grow-0 basis-auto">
+      <div className="h-14 w-14 relative shrink-0 grow-0 basis-auto z-[0]">
         {participants.slice(0, 3).map((p, i) => (
           <div
             key={i}
-            className={`absolute h-8 w-8 rounded-full border-2 border-white ${pos[i]}`}
+            className={`absolute h-8 w-8 rounded-full border-2 border-white ${pos[i]} z-0`}
           >
             {p.profilePic ? (
               <img
@@ -53,7 +53,6 @@ const GroupAvatar = ({ chat }) => {
       </div>
     );
   }
-  // 👬 2 người: hiển thị cạnh nhau
   // 👬 2 người: hiển thị cạnh nhau
   if (total === 2) {
     return (

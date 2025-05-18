@@ -26,7 +26,7 @@ const MenuHome = ({ onOpenProfileModal, onToggleContactSidebar, onShowMessageSid
   };
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-16 flex flex-col items-center bg-blue-600 text-white py-4">
+    <aside className="fixed left-0 top-0 h-screen w-16 flex flex-col items-center bg-blue-600 text-white py-4 z-[1000000]">
       {/* Avatar - Khi nhấn sẽ toggle menu */}
       <div className="relative">
         <div
@@ -53,7 +53,7 @@ const MenuHome = ({ onOpenProfileModal, onToggleContactSidebar, onShowMessageSid
 
         {isMenuOpen && (
           <div
-            className="absolute ml-14 top-0 w-64 bg-white text-black rounded-lg shadow-lg p-4 z-60"
+            className="absolute ml-14 top-0 w-64 bg-white text-black rounded-lg shadow-lg p-4 z-[1000000]"
             onClick={(e) => e.stopPropagation()} // Ngăn sự kiện click lan ra ngoài
           >
             <div className="flex items-center gap-3 border-b-2 pb-3">
